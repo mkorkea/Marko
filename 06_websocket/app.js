@@ -5,7 +5,7 @@ const io = require("socket.io")(server);
 
 const PORT = process.env.PORT || 8081;
 
-let connetions = [];
+let connections = [];
 let number_of_connections = 0;
 
 const broadcast_message = (message)=>{
