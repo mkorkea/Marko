@@ -11,8 +11,8 @@ app.get("/robot/joint_values/", (req, res, next) => {
       const regexp = 'Joint   [1-6]: *(-?.*)';
       let joint_values = [];
       let matches = robot_res.data.matchAll(regexp);
-      let count = 0;
-      for (const match of matches) {
+      let count = 0;6
+      for (const match of matches) {6
           count++;
           if (count > 6) break;
           const value = parseFloat(match[1]);
