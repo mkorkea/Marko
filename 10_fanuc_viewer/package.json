@@ -1,7 +1,8 @@
 {
   "name": "10_fanuc_viewer",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "start-dev": "nodemon app.js"
@@ -9,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "three": "^0.138.0"
   }
 }
