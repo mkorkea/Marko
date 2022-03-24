@@ -2,7 +2,7 @@ import * as THREE from "three";
 import {OrbitControls} from "/OrbitControls.js";
 import {STLLoader} from "/STLLoader.js";
 
-let socket = io("https://fanuc-wsserver.herokuapp.com/", {withCredentials: false});
+let socket = io("https://fanuc-wsserver007.herokuapp.com/", {withCredentials: false});
 
 const scene = new THREE.Scene();
 const renderer = new THREE.WebGLRenderer();
