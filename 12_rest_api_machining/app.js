@@ -9,7 +9,7 @@ const app = express();
 app.use(body_parser.json());
 
 //ROUTING
-app.post("/api/tool", tool_controller.api_post_tool;
+app.post("/api/tool", tool_controller.api_post_tool);
 app.get("/api/tools", tool_controller.api_get_tools);
 app.get("/api/tool/:id", tool_controller.api_get_tool);
 app.put("/api/tool/:id", tool_controller.api_put_tool);
