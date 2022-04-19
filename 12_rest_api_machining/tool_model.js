@@ -22,4 +22,4 @@ const schema = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("Tool", schema);
+module.exports = mongoose.model("tool", schema);

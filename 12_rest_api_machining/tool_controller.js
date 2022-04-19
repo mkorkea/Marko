@@ -1,12 +1,12 @@
-const alarm_model = require("./alarm_model");
+const tool_model = require("./tool_model");
 
 
 // CRUD
 
 //CREATE
 
-const api_post_alarm = (req, res) => {
-  let model = alarm_model(req.body);
+const api_post_tool = (req, res) => {
+  let model = tool_model(req.body);
   
   model
     .save()
@@ -21,16 +21,16 @@ const api_post_alarm = (req, res) => {
 
 // READ
 
-const api_get_alarms = (req, res) => {
-    alarm_model.find({}).then((alarms)=>{
-        res.send(alarms);
+const api_get_tools = (req, res) => {
+    tool_model.find({}).then((tools)=>{
+        res.send(tools);
     });
 };
 
-const api_get_alarm = (req, res) => {
+const api_get_tool = (req, res) => {
     const id = req.params.id;
-    alarm_model.findById(id).then((alarm)=>{
-        res.send(alarm);
+    tool_model.findById(id).then((tool)=>{
+        res.send(tool);
     }).catch(()=>{
         res.status(404);
         res.send("not found");
@@ -39,26 +39,26 @@ const api_get_alarm = (req, res) => {
 
 
 // UPDATE
-const api_put_alarm = (req, res) => {
+const api_put_tool = (req, res) => {
     const id = req.params.id;
-    alarm_model.findByIdAndUpdate(id, req.body).then((alarm)=>{
+    tool_model.findByIdAndUpdate(id, req.body).then((tool)=>{
         res.send();
-        // res.send(alarm);
+        // res.send(tool);
     });
 };
 
 // DELETE
 
-const api_delete_alarm = (req, res) => {
+const api_delete_tool = (req, res) => {
     const id = req.params.id;
-    alarm_model.findByIdAndDelete(id).then((alarm)=>{
+    tool_model.findByIdAndDelete(id).then((tool)=>{
         res.send();
     });
 };
 
 
-module.exports.api_post_alarm = api_post_alarm;
-module.exports.api_get_alarms = api_get_alarms;
-module.exports.api_get_alarm = api_get_alarm;
-module.exports.api_put_alarm = api_put_alarm;
-module.exports.api_delete_alarm = api_delete_alarm;
+module.exports.api_post_tool = api_post_tool;
+module.exports.api_get_tools = api_get_tools;
+module.exports.api_get_tool = api_get_tool;
+module.exports.api_put_tool = api_put_tool;
+module.exports.api_delete_tool = api_delete_tool;
