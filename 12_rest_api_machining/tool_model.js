@@ -11,11 +11,11 @@ const schema = new mongoose.Schema(
             required: true
         },
         Cutting_speed:{
-            type: Number,
+            type: String,
             required: true
         },
         Feed_rate: {
-            type: Number,
+            type: String,
             required: true
         }
 
